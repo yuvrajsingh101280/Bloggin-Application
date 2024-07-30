@@ -15,7 +15,7 @@ import NoPage from "./pages/nopage/Nopage.jsx";
 import AdminLogin from "./pages/admin/adminlogin/AdminLogin.jsx";
 import myState from "./context/data/myState.jsx";
 import { Toaster } from "react-hot-toast";
-const router = createBrowserRouter([
+const router = createBrowserRouter([    
   {
     path: "/",
     element: <Layout />,
