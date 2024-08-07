@@ -15,7 +15,8 @@ import NoPage from "./pages/nopage/Nopage.jsx";
 import AdminLogin from "./pages/admin/adminlogin/AdminLogin.jsx";
 import myState from "./context/data/myState.jsx";
 import { Toaster } from "react-hot-toast";
-const router = createBrowserRouter([    
+import MyState from "./context/data/myState.jsx";
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
@@ -55,11 +56,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <React.StrictMode>
-      <myState>
+      <MyState>
         {" "}
         <RouterProvider router={router} />
         <Toaster />
-      </myState>
+      </MyState>
     </React.StrictMode>
   </ThemeProvider>
 );

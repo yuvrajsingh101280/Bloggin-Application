@@ -1,7 +1,7 @@
-import myContext from "./myContext";
+import MyContext from "./myContext";
 import { useState } from "react";
 
-export default function myState() {
+export default function MyState({ children }) {
   const [mode, setMode] = useState("light");
 
   const toggleMode = () => {
@@ -15,8 +15,8 @@ export default function myState() {
   };
 
   return (
-    <myContext.Provider value={{ mode, toggleMode }}>
-      {props.children}
-    </myContext.Provider>
+    <MyContext.Provider value={{ mode, toggleMode }}>
+      {children}
+    </MyContext.Provider>
   );
 }
